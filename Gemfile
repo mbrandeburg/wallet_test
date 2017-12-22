@@ -47,9 +47,10 @@ group :development do
   gem 'spring'
 end
 
+# pg b/c postgress in production b/c horoku needs that not sqlite3
+
 group :production do
   gem 'pg' 
-  #pg b/c postgress in production b/c horoku needs that not sqlite3
-  gem 'rails_12factor' 
-  #not needed for rails5 
+  gem 'rails_12factor'
+  gem 'heroku-deflater' 
 end
