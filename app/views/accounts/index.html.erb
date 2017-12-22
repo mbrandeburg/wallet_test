@@ -20,6 +20,8 @@
     <tr>
       <td><%= account.title %></td>
       <td><%= account.description %></td>
+      <td><%= link_to "Edit", edit_account_path(account) %></td>
+      <td><%= link_to "Show", account_path(account) %></td>
     </tr>
     <% end %>
   </table>

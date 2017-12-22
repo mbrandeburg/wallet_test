@@ -11,4 +11,6 @@
 <p style="font-family:helvetica;"> Title: <%= @account.title %> </p>
 
 <p style="font-family:helvetica;"> Description: <%= @account.description %> </p>
+<%= link_to "Edit this Account", edit_account_path(@account) %> |
+<%= link_to "Back to Account listings", accounts_path %>
 </body>
