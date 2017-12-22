@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#home'
+  # FYI: needed to do the root for heroku deployment
   get 'welcome/home', to: 'welcome#home'
   
   #now let's make a path to index,make,show,destroy, w/e accounts
