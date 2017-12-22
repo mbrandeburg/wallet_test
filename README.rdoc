@@ -1,3 +1,5 @@
+This is the repository for the first generation of a whole new kind of wallet...for my friends.
+
 == README
 
 This README would normally document whatever steps are necessary to get the
