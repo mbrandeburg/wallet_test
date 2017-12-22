@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!-- this is the ultimate wrapper file - anything put in here will display on every page -->
+<% flash.each do |name, msg| %>
+  <ul>
+    <li> <%= msg %></li>
+  </ul>
+  <% end %>
 <%= yield %>
 
 </body>
