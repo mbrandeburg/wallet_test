@@ -6,6 +6,18 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'welcome/home', to: 'welcome#home'
   
+  #now let's make a path to index,make,show,destroy, w/e accounts
+  # (b/c why stay in freaking rails console to do db shit)
+  resources :accounts
+  # $ rake routes (rails routes in rails5) AND VOILA - ALL YOUR PATHS ARE BELONG TO US
+  # SO NOW WE GOTTA BUILD THE ACCOUNTS CONTROLLER 
+  # (SO WHEN YOU POINT TO 3000/ACCOUNTS/NEW ..IT DOES SHIT)
+
+  
+  
+  
+  
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
