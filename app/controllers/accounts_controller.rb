@@ -1,4 +1,8 @@
 class AccountsController < ApplicationController
+  def index
+    @accounts = Account.all
+  end
+  
   def new
     @account = Account.new
     # note that after you add this, it still won't show anything
