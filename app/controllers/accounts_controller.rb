@@ -9,13 +9,20 @@ class AccountsController < ApplicationController
 #     render plain: params[:account].inspect
     # ^^ allows us to see that when you hit submit, shit is getting passed through appropriately
     # NOW we need to save that - need to whitelist it first, so make private below
-    @account = Account.new(account_params)
-    @account.save
+    #### OOOOH AND B/C OF VALIDATION MAKE AN IF CLAUSE AROUND ALL THIS SHIT
     
-    # after saving, we need to show something to the user, so let's redirect!
-    # do rake routes and see that accounts#show is the right path for:
-    redirect_to accounts_show(@account)
-    # but we still need to build that show action first...whoops
+    if @account.save
+#     @account = Account.new(account_params)
+#     @account.save
+      # after saving, we need to show something to the user, so let's redirect!
+      # do rake routes and see that accounts#show is the right path for:
+      flash[:notice] = "Account was successfully created"
+      redirect_to account_path(@account)
+      # but we still need to build that show action first...whoops
+    else
+      render :new
+    end
+   
   end
   
   private
