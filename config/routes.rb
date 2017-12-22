@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # FYI: needed to do the root for heroku deployment
   get 'welcome/home', to: 'welcome#home'
   
+  
   #now let's make a path to index,make,show,destroy, w/e accounts
   # (b/c why stay in freaking rails console to do db shit)
   resources :accounts
