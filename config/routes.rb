@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # $ rake routes (rails routes in rails5) AND VOILA - ALL YOUR PATHS ARE BELONG TO US
   # SO NOW WE GOTTA BUILD THE ACCOUNTS CONTROLLER 
   # (SO WHEN YOU POINT TO 3000/ACCOUNTS/NEW ..IT DOES SHIT)
-
+  # **and as you remember, after doing that, you need the templates in views
   
   
   
