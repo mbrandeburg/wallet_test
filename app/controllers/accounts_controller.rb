@@ -5,6 +5,12 @@ class AccountsController < ApplicationController
     # need to go back to new.html.erb and fill out the form part so it shows stuff
   end
   
+  def edit
+    @account = Account.find(params[:id])
+    # now create and edit account template under views
+    # after that you run it and realize...oh shit, need def update below too
+  end
+  
   def create
 #     render plain: params[:account].inspect
     # ^^ allows us to see that when you hit submit, shit is getting passed through appropriately
@@ -22,9 +28,18 @@ class AccountsController < ApplicationController
     else
       render :new
     end
-   
   end
 
+  def update
+    @account = Account.find(params[:id])
+    if @account.update(account_params) #(text) from whitelist method
+      flash[:notice] = "Account was successfully updated"
+      redirect_to account_path(@account)
+    else
+      render :edit
+    end
+  end
+  
   # show controller time
   def show
     #notice that the url for the show error is account/id# so...
