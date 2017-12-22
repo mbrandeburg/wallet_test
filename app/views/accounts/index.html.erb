@@ -22,6 +22,7 @@
       <td><%= account.description %></td>
       <td><%= link_to "Edit", edit_account_path(account) %></td>
       <td><%= link_to "Show", account_path(account) %></td>
+      <td><%= link_to "Delete", account_path(account), method: :delete, data: {confirm: "Are you sure?"} %> </td>
     </tr>
     <% end %>
   </table>

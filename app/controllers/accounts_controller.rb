@@ -51,6 +51,13 @@ class AccountsController < ApplicationController
     # now make your views -> accounts -> show.html.erb
   end
   
+  def destroy
+    @account = Account.find(params[:id])
+    @account.destroy
+    flash[:notice] = 'Account was successfully deleted'
+    redirect_to accounts_path
+  end
+  
   private
     def account_params
       params.require(:account).permit(:title, :description)
