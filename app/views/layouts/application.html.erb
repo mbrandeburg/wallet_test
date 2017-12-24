@@ -13,7 +13,9 @@
     <li> <%= msg %></li>
   </ul>
   <% end %>
-<%= yield %>
+  <!-- Because this wrapper will appear on all pages, its a good place to build a nav bar etc. -->
+  <%= render 'layouts/navigation' %>
+  <%= yield %>
 
 </body>
 </html>
