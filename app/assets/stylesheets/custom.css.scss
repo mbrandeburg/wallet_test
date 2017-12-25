@@ -1,6 +1,25 @@
 
-$navbar-default-bg: #ffffff;
+$navbar-default-bg: transparent;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.mainBody {
+  background: transparent;
+}
+
+#logo {
+  font-size: 1.4em;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+#myTitle {
+  text-align: left;
+}
+
+.footer {
+  font-size: 1.2em;
+  color: #777;
+}

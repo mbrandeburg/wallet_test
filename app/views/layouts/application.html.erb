@@ -15,7 +15,9 @@
   <% end %>
   <!-- Because this wrapper will appear on all pages, its a good place to build a nav bar etc. -->
   <%= render 'layouts/navigation' %>
+  <div class= "container">
   <%= yield %>
-
+  </div>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
