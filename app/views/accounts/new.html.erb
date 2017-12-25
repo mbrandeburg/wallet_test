@@ -7,15 +7,7 @@
   </style>
 <body>
 
-<!-- how about a flash notice if we hit the else clause for bombing validation?-->
-<% if  @account.errors.any? %>
-  <h2>The following errors prevented the account from being created: </h2>
-<ul>
-  <% @account.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
+<%= render 'shared/errors', obj: @account %>
 
 <h1 style="font-family:helvetica;">Create your account here</h1>
 <!-- now we need to add form tools (guides.rubyonrails.org/form_helpers.html)-->
