@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+#   has_many :accounts
+  before_save { self.email = email.downcase }
   validates :username, presence: true, uniqueness: true, length: { minimum: 3, maximum: 25 }
 # Test in console, user = User.new(...)
 # then see that when you hit user.save to move it 
